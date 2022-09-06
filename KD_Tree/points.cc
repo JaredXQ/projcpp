@@ -28,22 +28,11 @@ class Point {
 
     /**
      * Gets the value of the Point object in the given dimension
-     * (index). This function is const so we don't modify Points using
-     * this function.
-     *
-     * @param index The dimension of the Point to grab.
-     * @return The value of the Point in the indexth dimension.
      */
     double operator[](int index) const;
 
     /**
      * Gets the value of the Point object in the given dimension
-     * (index). This is the non-const version, so it can be used to
-     * modify Points like so:
-     *
-     *     Point<3> a(1, 2, 3);
-     *     a[0] = 4; // a is now (4, 2, 3)
-     *
      * @param index The dimension of the Point to grab.
      * @return The value of the Point in the indexth dimension, by
      *	reference (so that it may be modified).
@@ -76,9 +65,7 @@ class Point {
     double vals[Dim];
 
 
-  //
-  // --- Code used for grading if you've visited a node: ---
-  //
+
   public:
     // Pure virtual class for an action when a mine is touched.
     class MineAction {
