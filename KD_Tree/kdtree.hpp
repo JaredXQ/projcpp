@@ -13,7 +13,7 @@
                                  const Point<Dim>& second, int curDim) const
  {
      /**
-      * @todo Implement this function!
+      * 
       */
       if (first[curDim] < second[curDim]) {
         return true;
@@ -28,9 +28,6 @@
                                  const Point<Dim>& currentBest,
                                  const Point<Dim>& potential) const
  {
-     /**
-      * @todo Implement this function!
-      */
       double a = 0.0;
       double b = 0.0;
       for (int i = 0; i < Dim; i++) {
@@ -48,9 +45,6 @@
  template <int Dim>
  KDTree<Dim>::KDTree(const vector<Point<Dim>>& newPoints)
  {
-     /**
-      * @todo Implement this function!
-      */
     std::vector<Point<Dim>> points = newPoints;
     size = newPoints.size();
     root = _buildTree(points, 0, 0, points.size() - 1);
@@ -58,9 +52,6 @@
 
  template <int Dim>
  KDTree<Dim>::KDTree(const KDTree<Dim>& other) {
-   /**
-    * @todo Implement this function!
-    */
     size = other.size;
     root = _copy(other.root);
     
@@ -68,9 +59,6 @@
 
  template <int Dim>
  const KDTree<Dim>& KDTree<Dim>::operator=(const KDTree<Dim>& rhs) {
-   /**
-    * @todo Implement this function!
-    */
     if (this == &rhs) {
       return *this;
     }
@@ -82,9 +70,6 @@
 
  template <int Dim>
  KDTree<Dim>::~KDTree() {
-   /**
-    * @todo Implement this function!
-    */
     _clear(root);
     size = 0;
  }
@@ -92,9 +77,6 @@
  template <int Dim>
  Point<Dim> KDTree<Dim>::findNearestNeighbor(const Point<Dim>& query) const
  {
-     /**
-      * @todo Implement this function!
-      */
      return _fnn(query, 0, root);
  }
 
