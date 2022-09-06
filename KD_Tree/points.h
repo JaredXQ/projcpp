@@ -23,9 +23,6 @@ Point<Dim>::Point(double arr[Dim]) {
         vals[i] = arr[i];
 }
 
-/*
- * Point constructor with mines, used for grading.
- */
 template <int Dim>
 Point<Dim>::Point(double arr[Dim], bool isMine, const MineAction * mineAction) : Point<Dim>(arr) {
   isMine_ = isMine;
